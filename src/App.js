@@ -1,20 +1,23 @@
-import CartProvider from './Store/CartProvider';
-import HeaderCard from './Components/headerCard';
-import CandyInput from './Components/CandyInput';
 
-import CandyShop from './Components/CandyShop';
-import CartProvider from './Store/CartProvider';
+
+import Form from "./Components/Form";
+import Cart from "./Components/Cart";
+import ContextProvider from "./Store/ContextProvider";
+import Model from "./Components/Model";
 
 function App() {
   return (
-    <CartProvider>
-      <HeaderCard />
-      <CandyInput />
-      <main>
-      <CandyShop />
-      </main>
-      
-    </CartProvider>
+    <ContextProvider>
+      <div >
+        <div >
+          <Form />
+          <Model />
+        </div>
+        <div >
+          <Cart />
+        </div>
+      </div>
+    </ContextProvider>
   );
 }
 
